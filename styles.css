@@ -1,1 +1,64 @@
-/*Maak hier jouw CSS!*/
+.container {
+    background-color: hsl(320, 10%, 70%);
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+    "title"
+    "main"
+    "c-picture"
+    "d-img-c-disc"
+    "e-text"
+    "dyn"
+    "footer";
+}
+.item {
+    background-color: hsl(350, 50%, 30%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+#number1 {
+    grid-area: title;
+}
+#number2 {
+    grid-area: c-picture;
+}
+#number3 {
+    grid-area: main;
+}
+#number4 {
+    grid-area: e-text;
+}
+#number4-5 {
+    grid-area: dyn;
+    background-color: hsl(320, 10%, 70%);
+
+}
+#number5 {
+    grid-area: d-img-c-disc;
+}
+#number6 {
+    grid-area: footer;
+}
+@media screen and (min-width: 576px) {
+    .container {
+        background-color: hsl(320, 10%, 70%);
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+    "title c-picture c-picture"
+    "main c-picture c-picture"
+    "main e-text d-img-c-disc"
+    "main e-text dyn"
+    "footer footer footer";
+    }
+}
